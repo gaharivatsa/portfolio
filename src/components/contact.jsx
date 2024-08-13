@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <>
-      <div ref={ref} className="flex flex-col justify-center items-center min-w-full h-[40vh] mt-20 mb-10 ">
+      <div ref={ref} className="flex flex-col justify-center items-center min-w-full h-[40vh] mt-20 mb-10">
         <div className="w-full lg:w-3/4 h-full mb-10 p-5 text-center">
           <motion.p 
             className="text-2xl lg:text-4xl font-semibold tracking-wide  text-white mb-4"
