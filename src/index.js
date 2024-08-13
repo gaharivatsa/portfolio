@@ -1,17 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Home from './components/home';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Navbar from './components/nav';
+import About from './components/about';
+import Work from './components/work';
+import Tech from './components/tech';
+import Contact from './components/contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+  <div className="relative h-screen overflow-hidden">
+    {/* Background layers */}
+    <div className="absolute inset-0 z-[-2] h-full w-full bg-gradient-to-r from-black to-blue-950" style={{ height: '100vh' }} />
+    <div className="absolute inset-0 z-[-2] h-full w-full bg-[radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]" style={{ height: '100vh' }} />
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    {/* Scrollable Content */}
+    <div className="relative h-full overflow-x-hidden overflow-y-auto">
+      <Navbar />
+      <Home />
+      <About />
+      <Work />
+      <Tech />
+      <Contact />
+    </div>
+  </div>
+);

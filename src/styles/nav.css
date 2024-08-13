@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Krona One';
+    src: url('../fonts/KronaOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body, .MuiTypography-root, .MuiButton-root, .MuiListItemText-root, .item {
+    font-family: 'Krona One';
+  }
+  
+  .MuiTypography-root {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .MuiButton-root, .MuiListItemText-primary {
+    font-size: 1rem;
+  }
+  
+  .MuiAppBar-root {
+    
+  }
+  
