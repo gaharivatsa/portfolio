@@ -17,12 +17,12 @@ const Home = () => {
       <div className="flex flex-wrap">
         <div className="mt-14 w-full lg:w-full p-10 lg:p-28">
         <div className="flex flex-col items-center lg:items-start">
-          <motion.h1 whileHover = {{ x:100,color:"blue",transition :{ease:'easeInOut' , duration:0.5,type:'spring', stiffness:500}}} drag = {"x"} className=" text-4xl lg:text-8xl font-bold p-2 mt-16 text-white">
+          <motion.h1 whileHover = {{ x:100,color:"blue",transition :{ease:'easeInOut' , duration:0.5,type:'spring', stiffness:500}}} drag = {"x"} className=" text-4xl lg:text-6xl font-bold p-2 mt-10 text-white">
             HELLO WORLD
           </motion.h1>
 
           <motion.p
-      className="text-xs lg:text-4xl font-thin mt-14 p-2 text-white leading-loose"
+      className="text-xs lg:text-2xl font-thin mt-14 p-2 text-white leading-loose"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: 'easeIn', delay: 0 }} // Adjust delay to 0

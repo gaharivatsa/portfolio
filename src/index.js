@@ -16,7 +16,7 @@ root.render(
     <div className="absolute inset-0 z-[-2] h-full w-full bg-[radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]" style={{ height: '100vh' }} />
 
     {/* Scrollable Content */}
-    <div className="relative h-full overflow-x-hidden overflow-y-auto">
+    <div className="relative h-full overflow-x-hidden overflow-y-auto lg:p-10">
       <Navbar />
       <Home />
       <About />

@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <>
-      <div ref={ref} className="flex flex-col justify-center items-center min-w-full h-[30vh] mt-20">
+      <div ref={ref} className="flex flex-col justify-center items-center min-w-full h-[40vh] mt-20 mb-10 ">
         <div className="w-full lg:w-3/4 h-full mb-10 p-5 text-center">
           <motion.p 
             className="text-2xl lg:text-4xl font-semibold tracking-wide  text-white mb-4"
@@ -27,7 +27,7 @@ const Contact = () => {
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </motion.p>
           
-          <div className="flex flex-col lg:flex-row justify-center items-center text-white mt-6 space-y-4 lg:space-y-0 lg:space-x-10">
+          <div className="flex flex-col lg:flex-row justify-center items-center text-white mt-4 space-y-4 lg:space-y-0 lg:space-x-10">
             <motion.div 
               className="flex flex-row items-center"
               initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
+   
     </>
   );
 };

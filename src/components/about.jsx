@@ -22,23 +22,23 @@ const About = () => {
         </motion.div>
         
         <motion.div 
-          className="w-full lg:w-1/2 h-auto bg-white/20 backdrop-blur-md p-5 sm:p-8 lg:p-10 rounded-3xl shadow-xl flex flex-col items-start justify-center"
+          className="w-full lg:w-1/2 h-auto bg-white/20 backdrop-blur-md p-5 sm:p-8 lg:p-5 rounded-3xl shadow-xl flex flex-col items-start justify-center"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }} // Ensure the animation happens only once
           transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           <motion.p 
-            className="text-lg sm:text-xl lg:text-3xl font-bold text-white mb-4"
+            className="text-lg sm:text-sm lg:text-xs font-bold text-white mb-4"
           >
             Hi, I am Harivatsa, a software engineer with a passion for creating innovative solutions.
           </motion.p>
 
-          <p className="text-white text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
+          <p className="text-white  sm:text-base lg:text-xs leading-relaxed mb-4">
             I have completed my Bachelor's degree in Computer Science Engineering with a specialization in Big Data Analytics. 
             Throughout my academic journey, I have gained in-depth knowledge in various domains including:
           </p>
-          <ul className="text-white list-disc list-inside mb-5 text-sm sm:text-base">
+          <ul className="text-white list-disc list-inside mb-5 lg:text-xs sm:text-base">
             <li>Data Structures and Algorithms</li>
             <li>Web Development (HTML, CSS, JavaScript, React, Django)</li>
             <li>Database Management (SQL, NoSQL)</li>
@@ -46,10 +46,10 @@ const About = () => {
             <li>Machine Learning and AI</li>
           </ul>
 
-          <p className="text-white text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
+          <p className="text-white text-sm sm:text-base lg:text-xs leading-relaxed mb-4">
             I am capable of performing various roles including:
           </p>
-          <ul className="text-white list-disc list-inside mb-5 text-sm sm:text-base">
+          <ul className="text-white list-disc list-inside mb-5 lg:text-xs sm:text-base">
             <li>Full Stack Web Developer</li>
             <li>Data Scientist</li>
             <li>Machine Learning Engineer</li>
@@ -57,7 +57,7 @@ const About = () => {
             <li>Big Data Analyst</li>
           </ul>
 
-          <p className="text-white text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p className="text-white text-sm sm:text-base lg:text-xs leading-relaxed">
             I am always eager to take on challenging projects that push the boundaries of my knowledge and skills. 
             My goal is to leverage technology to solve real-world problems and make a meaningful impact.
           </p>
