@@ -9,55 +9,58 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thanks for reaching out! I\'ll get back to you soon.');
+    alert('📡 Transmission received! I\'ll respond via subspace soon.');
     setFormData({ name: '', email: '', message: '' });
   };
 
   return (
-    <section id="contact" className="py-24 bg-slate-900">
+    <section id="contact" className="py-24 relative">
       <div className="container mx-auto px-6">
         <motion.div ref={ref} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Get In <span className="text-purple-400">Touch</span></h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">Have a project in mind or want to collaborate? Let's talk!</p>
+          <span className="text-cyan-400 font-medium tracking-wider uppercase text-sm">📡 Open Channel</span>
+          <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-4">
+            <span className="gradient-text">Establish Contact</span>
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">Send a transmission. Let's explore the cosmos together.</p>
         </motion.div>
+
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}>
-            <h3 className="text-2xl font-bold text-white mb-6">Contact Info</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">📍 Coordinates</h3>
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                </div>
+              <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                <span className="text-2xl">📧</span>
                 <div>
-                  <div className="text-gray-400 text-sm">Email</div>
-                  <a href="mailto:gaharivatsa@gmail.com" className="text-white hover:text-purple-400 transition-colors">gaharivatsa@gmail.com</a>
+                  <div className="text-gray-400 text-sm">Subspace Frequency</div>
+                  <a href="mailto:gaharivatsa@gmail.com" className="text-white hover:text-cyan-400 transition-colors">gaharivatsa@gmail.com</a>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-6 h-6 text-purple-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                </div>
+              <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                <span className="text-2xl">🌌</span>
                 <div>
-                  <div className="text-gray-400 text-sm">GitHub</div>
-                  <a href="https://github.com/gaharivatsa" target="_blank" rel="noopener noreferrer" className="text-white hover:text-purple-400 transition-colors">@gaharivatsa</a>
+                  <div className="text-gray-400 text-sm">Star Hub</div>
+                  <a href="https://github.com/gaharivatsa" target="_blank" rel="noopener noreferrer" className="text-white hover:text-cyan-400 transition-colors">@gaharivatsa</a>
                 </div>
               </div>
             </div>
           </motion.div>
+
           <motion.form initial={{ opacity: 0, x: 30 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6, delay: 0.3 }} onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-gray-400 text-sm mb-2">Name</label>
-              <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-colors" placeholder="Your name" required />
+              <label className="block text-gray-400 text-sm mb-2">Commander Name</label>
+              <input type="text" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-cyan-500 transition-colors" placeholder="Your designation" required />
             </div>
             <div>
-              <label className="block text-gray-400 text-sm mb-2">Email</label>
-              <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-colors" placeholder="your@email.com" required />
+              <label className="block text-gray-400 text-sm mb-2">Transmission Frequency (Email)</label>
+              <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-cyan-500 transition-colors" placeholder="your@email.com" required />
             </div>
             <div>
-              <label className="block text-gray-400 text-sm mb-2">Message</label>
-              <textarea value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={4} className="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-purple-500 transition-colors resize-none" placeholder="Your message..." required />
+              <label className="block text-gray-400 text-sm mb-2">Message Content</label>
+              <textarea value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} rows={4} className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-cyan-500 transition-colors resize-none" placeholder="Your transmission..." required />
             </div>
-            <button type="submit" className="w-full py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all transform hover:scale-[1.02]">Send Message</button>
+            <motion.button type="submit" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full py-4 bg-gradient-to-r from-pink-600 via-purple-600 to-cyan-600 text-white font-bold rounded-lg hover:shadow-lg hover:shadow-purple-500/30 transition-all flex items-center justify-center gap-2">
+              🚀 <span>Send Transmission</span>
+            </motion.button>
           </motion.form>
         </div>
       </div>
