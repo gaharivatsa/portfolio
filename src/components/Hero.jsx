@@ -107,16 +107,6 @@ function TypewriterText({ text, delay = 0 }) {
 }
 
 export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
   const roles = ["Full Stack Developer", "AI Engineer", "Data Scientist", "Space Explorer"];
   const [currentRole, setCurrentRole] = useState(0);
 
@@ -125,7 +115,7 @@ export default function Hero() {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
