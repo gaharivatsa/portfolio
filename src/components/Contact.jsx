@@ -76,7 +76,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-sm text-slate-500">LinkedIn</p>
-                    <a href="#" className="text-slate-900 hover:text-blue-600 transition-colors">
+                    <a href="https://linkedin.com/in/gaharivatsa" target="_blank" rel="noopener noreferrer" className="text-slate-900 hover:text-blue-600 transition-colors">
                       Connect with me
                     </a>
                   </div>
